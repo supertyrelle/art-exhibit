@@ -1,0 +1,23 @@
+// variables 
+$white: white;
+$black: black;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 1rem;
+}
+
+.backdrop {
+    position: absolute;
+    top: -20vh;
+    left: 0px;
+    height: 120vh;
+    width: 100vw;
+    z-index: -1;
+
+    background:lime;
+}

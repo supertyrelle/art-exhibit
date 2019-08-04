@@ -1,0 +1,83 @@
+@import 'tech';
+@import 'framework';
+
+// header
+header {
+    width: 95vw;
+    margin: auto;
+    max-width: 1400px;
+
+    .logo {
+        font-size: 40pt;
+    }
+
+    nav {
+        a {
+            color: black;
+            text-decoration: none;
+
+            &+a {
+                margin-left: 2rem;
+            }
+        }
+    }
+}
+
+// main
+main {
+    min-height: 75vh;
+    max-width: 1400px;
+    margin: auto;
+
+    .call-to-action {
+        padding-top:2rem;
+        position: relative;
+        .cta-content {
+            h1 {
+                font-size: 44pt;
+            }
+        }
+
+        .cta-ill {
+            display: flex;
+            
+            img {
+                &+img {
+                    // padding-left:5px;
+                }
+            }
+        }
+    }
+}
+
+// footer
+footer {
+    width: 100%;
+    background: rgba($black, 15%);
+
+    .logo {
+        font-size: 25pt;
+    }
+
+    .footer-content,
+    .legal {
+        width: 100%;
+        padding: 0 2.5rem;
+
+    }
+
+    .footer-content {
+        padding: 1rem 0rem;
+    }
+
+    .legal {
+        padding: 1rem 0;
+        background: rgba($black, 20%);
+
+        p {
+            &+p {
+                margin-left: 5rem;
+            }
+        }
+    }
+}
