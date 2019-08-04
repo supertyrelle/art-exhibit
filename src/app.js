@@ -55,18 +55,19 @@ function home() {
         // create call to action content
         const ctaContent = document.createElement('div')
         ctaContent.setAttribute(`class`, 'cta-content col-fs');
+        ctaContent.setAttribute(`data-aos`, 'fade-down');
 
         // call to action title
         const ctaTitle = document.createElement('h1')
-        ctaTitle.textContent = `There's something about Art that moves us.`;
+        ctaTitle.textContent = `There's something about Art that always moves us.`;
 
         // call to action subtitle
         const ctaSub = document.createElement('p')
-        ctaSub.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae est quis.';
+        ctaSub.textContent = 'The Winter 2019 Exhibit theme is Hodgepodge.';
 
         // call to action exhibit dates
-        const ctaExDates = document.createElement('h3')
-        ctaExDates.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae est quis.';
+        const ctaExDates = document.createElement('h2')
+        ctaExDates.textContent = 'Exhibit Dates: Dec. 2, 2019 - Feb. 12, 2019';
 
         // call to action button
         const ctaButton = document.createElement('button')
@@ -86,26 +87,27 @@ function home() {
         // the call to action art will be loaded in sequentially
         const illPt1 = document.createElement('img');
         illPt1.setAttribute(`data-aos`, 'fade-down');
+        illPt1.setAttribute(`data-aos-delay`, '100');
         illPt1.src = illPt1p;
         const illPt2 = document.createElement('img');
         illPt2.setAttribute(`data-aos`, 'fade-down');
-        illPt2.setAttribute(`data-aos-delay`, '100');
+        illPt2.setAttribute(`data-aos-delay`, '200');
         illPt2.src = illPt2p;
         const illPt3 = document.createElement('img');
         illPt3.setAttribute(`data-aos`, 'fade-down');
-        illPt3.setAttribute(`data-aos-delay`, '200');
+        illPt3.setAttribute(`data-aos-delay`, '300');
         illPt3.src = illPt3p;
         const illPt4 = document.createElement('img');
         illPt4.setAttribute(`data-aos`, 'fade-down');
-        illPt4.setAttribute(`data-aos-delay`, '300');
+        illPt4.setAttribute(`data-aos-delay`, '400');
         illPt4.src = illPt4p;
         const illPt5 = document.createElement('img');
         illPt5.setAttribute(`data-aos`, 'fade-down');
-        illPt5.setAttribute(`data-aos-delay`, '400');
+        illPt5.setAttribute(`data-aos-delay`, '500');
         illPt5.src = illPt5p;
         const illPt6 = document.createElement('img');
         illPt6.setAttribute(`data-aos`, 'fade-down');
-        illPt6.setAttribute(`data-aos-delay`, '500');
+        illPt6.setAttribute(`data-aos-delay`, '600');
         illPt6.src = illPt6p;
         // append the illustration to its parent
         ctaIll.appendChild(illPt1);

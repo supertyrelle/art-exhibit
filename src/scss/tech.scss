@@ -1,14 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Beth+Ellen|Crimson+Pro:300,400,700,900&display=swap');
+
 // variables 
-$white: white;
-$black: black;
+// colors
+$white: rgb(252, 252, 252);
+$black: rgb(23, 23, 23);
+$primary: rgb(250, 162, 114);
+// fonts
+$main-font: 'Beth Ellen',
+cursive;
+$body-font: 'Crimson Pro',
+serif;
 
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: $body-font;
+    color: $black;
+}
+
+h1 {
+    font-family: $main-font;
 }
 
 body {
     padding-top: 1rem;
+    background: $white;
 }
 
 .backdrop {
@@ -19,5 +35,5 @@ body {
     width: 100vw;
     z-index: -1;
 
-    background:lime;
+    background: lime;
 }

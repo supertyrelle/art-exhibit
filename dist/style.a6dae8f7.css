@@ -1,10 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Beth+Ellen|Crimson+Pro:300,400,700,900&display=swap");
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: "Crimson Pro", serif;
+  color: #171717;
+}
+
+h1 {
+  font-family: "Beth Ellen", cursive;
 }
 
 body {
   padding-top: 1rem;
+  background: #fcfcfc;
 }
 
 .backdrop {
@@ -66,6 +74,13 @@ body {
   flex-wrap: wrap;
 }
 
+button {
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  font-size: 18pt;
+  border: none;
+}
+
 header {
   width: 95vw;
   margin: auto;
@@ -91,15 +106,35 @@ main .call-to-action {
   padding-top: 2rem;
   position: relative;
 }
+main .call-to-action .cta-content {
+  width: 35%;
+}
 main .call-to-action .cta-content h1 {
-  font-size: 44pt;
+  font-size: 38pt;
+  line-height: 50pt;
+  margin-bottom: 1rem;
+}
+main .call-to-action .cta-content p {
+  margin-top: 1em;
+}
+main .call-to-action .cta-content button {
+  margin-top: 1em;
+  width: 100%;
+  background: rgba(250, 162, 114, 0.65);
+  color: #171717;
+  font-weight: 100;
+  transition: background ease 230ms;
+}
+main .call-to-action .cta-content button:hover {
+  background: rgba(250, 162, 114, 0.85);
+  cursor: pointer;
 }
 main .call-to-action .cta-ill {
   display: flex;
 }
 footer {
   width: 100%;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(23, 23, 23, 0.15);
 }
 footer .logo {
   font-size: 25pt;
@@ -114,7 +149,7 @@ footer .footer-content {
 }
 footer .legal {
   padding: 1rem 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(23, 23, 23, 0.2);
 }
 footer .legal p + p {
   margin-left: 5rem;
