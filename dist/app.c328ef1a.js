@@ -129,6 +129,8 @@ module.exports = "/cta-ill-4.a73588d9.png";
 module.exports = "/cta-ill-5.b386d14f.png";
 },{}],"img/cta-ill/cta-ill-6.png":[function(require,module,exports) {
 module.exports = "/cta-ill-6.6d533065.png";
+},{}],"img/ex-stats/bulbs.png":[function(require,module,exports) {
+module.exports = "/bulbs.a1cbaca6.png";
 },{}],"../node_modules/aos/dist/aos.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -222,6 +224,8 @@ var _ctaIll5 = _interopRequireDefault(require("./img/cta-ill/cta-ill-5.png"));
 
 var _ctaIll6 = _interopRequireDefault(require("./img/cta-ill/cta-ill-6.png"));
 
+var _bulbs = _interopRequireDefault(require("./img/ex-stats/bulbs.png"));
+
 var _aos = _interopRequireDefault(require("aos"));
 
 require("aos/dist/aos.css");
@@ -229,6 +233,7 @@ require("aos/dist/aos.css");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // import call to action images
+// import exhibit images
 // animate on scroll library
 // You can also use <link> for styles
 // ..
@@ -259,7 +264,7 @@ _aos.default.init({
   // values from 0 to 3000, with step 50ms
   easing: 'ease',
   // default easing for AOS animations
-  once: false,
+  once: true,
   // whether animation should happen only once - while scrolling down
   mirror: false,
   // whether elements should animate out while scrolling past them
@@ -271,85 +276,171 @@ _aos.default.init({
 function home() {
   function homeContent() {
     var app = document.querySelector('main'); // call to action section
-    // create call to action element
 
-    var callToAction = document.createElement('section');
-    callToAction.setAttribute("class", 'call-to-action row-sa-c nw'); // append the call to action section
+    function callToAction() {
+      // create call to action element
+      var callToActionSec = document.createElement('section');
+      callToActionSec.setAttribute("class", 'call-to-action row-sb-c nw'); // append the call to action section
 
-    app.appendChild(callToAction); // callToAction.setAttribute(`class`, '');
-    // create call to action backdrop
-    // const backdrop = document.createElement('div');
-    // backdrop.setAttribute(`class`, 'backdrop');
-    // backdrop.setAttribute(`data-aos`, 'fade-down');
-    // create call to action content
+      app.appendChild(callToActionSec); // callToAction.setAttribute(`class`, '');
+      // create call to action backdrop
+      // const backdrop = document.createElement('div');
+      // backdrop.setAttribute(`class`, 'backdrop');
+      // backdrop.setAttribute(`data-aos`, 'fade-down');
+      // create call to action content
 
-    var ctaContent = document.createElement('div');
-    ctaContent.setAttribute("class", 'cta-content col-fs');
-    ctaContent.setAttribute("data-aos", 'fade-down'); // call to action title
+      var ctaContent = document.createElement('div');
+      ctaContent.setAttribute("class", 'cta-content col-fs');
+      ctaContent.setAttribute("data-aos", 'fade-down'); // call to action title
 
-    var ctaTitle = document.createElement('h1');
-    ctaTitle.textContent = "There's something about Art that always moves us."; // call to action subtitle
+      var ctaTitle = document.createElement('h1');
+      ctaTitle.textContent = "There's something about Art that always moves us."; // call to action subtitle
 
-    var ctaSub = document.createElement('p');
-    ctaSub.textContent = 'The Winter 2019 Exhibit theme is Hodgepodge.'; // call to action exhibit dates
+      var ctaSub = document.createElement('p');
+      ctaSub.textContent = 'The Winter 2019 Exhibit theme is Hodgepodge.'; // call to action ex dates
 
-    var ctaExDates = document.createElement('h2');
-    ctaExDates.textContent = 'Exhibit Dates: Dec. 2, 2019 - Feb. 12, 2019'; // call to action button
+      var ctaExDates = document.createElement('h2');
+      ctaExDates.textContent = 'Exhibit Dates: Dec. 2, 2019 - Feb. 12, 2019'; // call to action button
 
-    var ctaButton = document.createElement('button');
-    ctaButton.setAttribute("class", 'cta-button');
-    ctaButton.textContent = 'View Exhibit'; // append call to action content elements to the content
+      var ctaButton = document.createElement('button');
+      ctaButton.setAttribute("class", 'cta-button');
+      ctaButton.textContent = 'View Exhibit'; // append call to action content elements to the content
 
-    ctaContent.appendChild(ctaTitle);
-    ctaContent.appendChild(ctaSub);
-    ctaContent.appendChild(ctaExDates);
-    ctaContent.appendChild(ctaButton); // create call to action illustration
+      ctaContent.appendChild(ctaTitle);
+      ctaContent.appendChild(ctaSub);
+      ctaContent.appendChild(ctaExDates);
+      ctaContent.appendChild(ctaButton); // create call to action illustration
 
-    var ctaIll = document.createElement('div');
-    ctaIll.setAttribute("class", 'cta-ill nw'); // the call to action art will be loaded in sequentially
+      var ctaIll = document.createElement('div');
+      ctaIll.setAttribute("class", 'cta-ill nw'); // the call to action art will be loaded in sequentially
 
-    var illPt1 = document.createElement('img');
-    illPt1.setAttribute("data-aos", 'fade-down');
-    illPt1.setAttribute("data-aos-delay", '100');
-    illPt1.src = _ctaIll.default;
-    var illPt2 = document.createElement('img');
-    illPt2.setAttribute("data-aos", 'fade-down');
-    illPt2.setAttribute("data-aos-delay", '200');
-    illPt2.src = _ctaIll2.default;
-    var illPt3 = document.createElement('img');
-    illPt3.setAttribute("data-aos", 'fade-down');
-    illPt3.setAttribute("data-aos-delay", '300');
-    illPt3.src = _ctaIll3.default;
-    var illPt4 = document.createElement('img');
-    illPt4.setAttribute("data-aos", 'fade-down');
-    illPt4.setAttribute("data-aos-delay", '400');
-    illPt4.src = _ctaIll4.default;
-    var illPt5 = document.createElement('img');
-    illPt5.setAttribute("data-aos", 'fade-down');
-    illPt5.setAttribute("data-aos-delay", '500');
-    illPt5.src = _ctaIll5.default;
-    var illPt6 = document.createElement('img');
-    illPt6.setAttribute("data-aos", 'fade-down');
-    illPt6.setAttribute("data-aos-delay", '600');
-    illPt6.src = _ctaIll6.default; // append the illustration to its parent
+      var illPt1 = document.createElement('img');
+      illPt1.setAttribute("data-aos", 'fade-down');
+      illPt1.setAttribute("data-aos-delay", '100');
+      illPt1.src = _ctaIll.default;
+      var illPt2 = document.createElement('img');
+      illPt2.setAttribute("data-aos", 'fade-down');
+      illPt2.setAttribute("data-aos-delay", '200');
+      illPt2.src = _ctaIll2.default;
+      var illPt3 = document.createElement('img');
+      illPt3.setAttribute("data-aos", 'fade-down');
+      illPt3.setAttribute("data-aos-delay", '300');
+      illPt3.src = _ctaIll3.default;
+      var illPt4 = document.createElement('img');
+      illPt4.setAttribute("data-aos", 'fade-down');
+      illPt4.setAttribute("data-aos-delay", '400');
+      illPt4.src = _ctaIll4.default;
+      var illPt5 = document.createElement('img');
+      illPt5.setAttribute("data-aos", 'fade-down');
+      illPt5.setAttribute("data-aos-delay", '500');
+      illPt5.src = _ctaIll5.default;
+      var illPt6 = document.createElement('img');
+      illPt6.setAttribute("data-aos", 'fade-down');
+      illPt6.setAttribute("data-aos-delay", '600');
+      illPt6.src = _ctaIll6.default; // append the illustration to its parent
 
-    ctaIll.appendChild(illPt1);
-    ctaIll.appendChild(illPt2);
-    ctaIll.appendChild(illPt3);
-    ctaIll.appendChild(illPt4);
-    ctaIll.appendChild(illPt5);
-    ctaIll.appendChild(illPt6); // append the main call to action elements
-    // callToAction.appendChild(backdrop);
+      ctaIll.appendChild(illPt1);
+      ctaIll.appendChild(illPt2);
+      ctaIll.appendChild(illPt3);
+      ctaIll.appendChild(illPt4);
+      ctaIll.appendChild(illPt5);
+      ctaIll.appendChild(illPt6); // append the main call to action elements
+      // callToAction.appendChild(backdrop);
 
-    callToAction.appendChild(ctaContent);
-    callToAction.appendChild(ctaIll);
+      callToActionSec.appendChild(ctaContent);
+      callToActionSec.appendChild(ctaIll);
+    }
+
+    ;
+
+    function exStats() {
+      // create content area element
+      var exStatsSec = document.createElement('section');
+      exStatsSec.setAttribute("class", 'ex-stats row-sa  nw'); // append the call to action section
+
+      app.appendChild(exStatsSec); // create ex illustration section
+
+      var exIllWrapper = document.createElement('div');
+      exIllWrapper.setAttribute("class", 'ex-stats-art');
+      exIllWrapper.setAttribute("data-aos", 'fade-up'); // import ex illustration
+
+      var exIll = document.createElement('img');
+      exIll.src = _bulbs.default; // create the exhibit stat content section
+
+      var exStatsContent = document.createElement('div');
+      exStatsContent.setAttribute("class", 'ex-stats-content col-c'); // create the three main fact elements
+
+      var fact1 = document.createElement('div');
+      fact1.setAttribute("class", 'fact');
+      fact1.setAttribute("data-aos", 'fade-up');
+      fact1.setAttribute("data-aos-offset", '500');
+      var fact2 = document.createElement('div');
+      fact2.setAttribute("class", 'fact');
+      fact2.setAttribute("data-aos", 'fade-up');
+      fact2.setAttribute("data-aos-offset", '400');
+      var fact3 = document.createElement('div');
+      fact3.setAttribute("class", 'fact');
+      fact3.setAttribute("data-aos", 'fade-up');
+      fact3.setAttribute("data-aos-offset", '500'); // fact 1 content
+
+      var fact1Header = document.createElement('h1');
+      fact1Header.textContent = "8";
+      var fact1Sub = document.createElement('h2');
+      fact1Sub.textContent = "Different Showcases"; // fact 2 content
+
+      var fact2Header = document.createElement('h1');
+      fact2Header.textContent = "15";
+      var fact2Sub = document.createElement('h2');
+      fact2Sub.textContent = "Different events"; // fact 2 list
+
+      var listData = ['Lunch with Sea Monsters', "Eastern Washington fire bans", 'Fire smoke from Canada', 'Pizza across the street', 'Orange river water', 'The four seasons of Spokane'];
+      var listElement = document.createElement('ul'); // Set up a loop that goes through the items in listItems one at a time
+
+      var numberOfListItems = listData.length;
+
+      for (var i = 0; i < numberOfListItems; ++i) {
+        // create an item for each one
+        var listItem = document.createElement('li');
+        listItem.setAttribute("data-aos", 'fade-right');
+        listItem.setAttribute("data-aos-delay", i * 100);
+        listItem.innerHTML = listData[i];
+        listElement.appendChild(listItem);
+      } // fact 3 content
+
+
+      var fact3Header = document.createElement('h1');
+      fact3Header.textContent = "450";
+      var fact3Sub = document.createElement('h2');
+      fact3Sub.textContent = "Pieces for Sale"; // append fact 1
+
+      fact1.appendChild(fact1Header);
+      fact1.appendChild(fact1Sub);
+      exStatsContent.appendChild(fact1); // append fact 2
+
+      fact2.appendChild(fact2Header);
+      fact2.appendChild(fact2Sub);
+      fact2.appendChild(listElement);
+      exStatsContent.appendChild(fact2); // append fact 3
+
+      fact3.appendChild(fact3Header);
+      fact3.appendChild(fact3Sub);
+      exStatsContent.appendChild(fact3);
+      exIllWrapper.appendChild(exIll);
+      exIllWrapper.appendChild(exStatsContent);
+      exStatsSec.appendChild(exIllWrapper);
+      exStatsSec.appendChild(exStatsContent);
+    }
+
+    ;
+    callToAction();
+    exStats();
   }
 
   homeContent();
 }
 
 home();
-},{"./img/cta-ill/cta-ill-1.png":"img/cta-ill/cta-ill-1.png","./img/cta-ill/cta-ill-2.png":"img/cta-ill/cta-ill-2.png","./img/cta-ill/cta-ill-3.png":"img/cta-ill/cta-ill-3.png","./img/cta-ill/cta-ill-4.png":"img/cta-ill/cta-ill-4.png","./img/cta-ill/cta-ill-5.png":"img/cta-ill/cta-ill-5.png","./img/cta-ill/cta-ill-6.png":"img/cta-ill/cta-ill-6.png","aos":"../node_modules/aos/dist/aos.js","aos/dist/aos.css":"../node_modules/aos/dist/aos.css"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./img/cta-ill/cta-ill-1.png":"img/cta-ill/cta-ill-1.png","./img/cta-ill/cta-ill-2.png":"img/cta-ill/cta-ill-2.png","./img/cta-ill/cta-ill-3.png":"img/cta-ill/cta-ill-3.png","./img/cta-ill/cta-ill-4.png":"img/cta-ill/cta-ill-4.png","./img/cta-ill/cta-ill-5.png":"img/cta-ill/cta-ill-5.png","./img/cta-ill/cta-ill-6.png":"img/cta-ill/cta-ill-6.png","./img/ex-stats/bulbs.png":"img/ex-stats/bulbs.png","aos":"../node_modules/aos/dist/aos.js","aos/dist/aos.css":"../node_modules/aos/dist/aos.css"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -377,7 +468,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60889" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64775" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

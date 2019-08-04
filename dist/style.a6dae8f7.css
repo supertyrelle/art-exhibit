@@ -15,6 +15,10 @@ body {
   background: #fcfcfc;
 }
 
+section + section {
+  margin-top: 3em;
+}
+
 .backdrop {
   position: absolute;
   top: -20vh;
@@ -34,6 +38,21 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.row-sb-fs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.row-sa {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -67,6 +86,14 @@ body {
   flex-wrap: wrap;
 }
 
+.col-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
 .col-fs {
   display: flex;
   flex-direction: column;
@@ -88,6 +115,18 @@ header {
 }
 header .logo {
   font-size: 40pt;
+  position: relative;
+}
+header .logo::after {
+  content: "Art Exhibit";
+  position: absolute;
+  right: 0px;
+  bottom: -0.5em;
+  display: block;
+  font-size: 12pt;
+}
+header nav {
+  font-size: 14pt;
 }
 header nav a {
   color: black;
@@ -103,8 +142,8 @@ main {
   margin: auto;
 }
 main .call-to-action {
-  padding-top: 2rem;
   position: relative;
+  height: 75vh;
 }
 main .call-to-action .cta-content {
   width: 35%;
@@ -132,12 +171,91 @@ main .call-to-action .cta-content button:hover {
 main .call-to-action .cta-ill {
   display: flex;
 }
+main .call-to-action .cta-ill img + img {
+  padding-left: 5px;
+}
+main .call-to-action .cta-ill img:nth-child(4) {
+  padding-left: 0px;
+}
+main .ex-stats {
+  height: auto;
+}
+main .ex-stats .ex-stats-art {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  height: 325vh;
+}
+main .ex-stats .ex-stats-art img {
+  position: sticky;
+  top: 4rem;
+  left: 0px;
+  display: inline-block;
+  width: 100%;
+}
+main .ex-stats .ex-stats-content {
+  align-self: stretch;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+}
+main .ex-stats .ex-stats-content .fact {
+  align-self: stretch;
+  padding-top: 25vh;
+  padding-bottom: 50vh;
+}
+main .ex-stats .ex-stats-content .fact h1 {
+  font-size: 128pt;
+  line-height: 150pt;
+  color: #171717;
+}
+main .ex-stats .ex-stats-content .fact h2 {
+  font-weight: 100;
+  font-size: 40pt;
+}
+main .ex-stats .ex-stats-content .fact ul,
+main .ex-stats .ex-stats-content .fact li {
+  list-style-type: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+main .ex-stats .ex-stats-content .fact li {
+  padding: 1em 1em;
+  font-size: 16pt;
+  background: rgba(23, 23, 23, 0.02);
+  margin: 0.5em 0;
+  display: block;
+}
+main .ex-stats .ex-stats-content .fact:nth-child(2) {
+  padding-bottom: 35vh;
+}
+main .ex-stats .ex-stats-content .fact:last-child {
+  padding-bottom: 25vh;
+}
+
 footer {
+  margin-top: 8em;
   width: 100%;
   background: rgba(23, 23, 23, 0.15);
 }
 footer .logo {
   font-size: 25pt;
+  position: relative;
+}
+footer .logo::after {
+  content: "Art Exhibit";
+  position: absolute;
+  right: 0px;
+  bottom: -0.5em;
+  display: block;
+  font-size: 8pt;
 }
 footer .footer-content,
 footer .legal {
@@ -146,6 +264,21 @@ footer .legal {
 }
 footer .footer-content {
   padding: 1rem 0rem;
+}
+footer .footer-content .quick-links h5 {
+  text-transform: uppercase;
+  color: rgba(23, 23, 23, 0.5);
+  font-size: 14pt;
+  margin-bottom: 0.5em;
+}
+footer .footer-content .quick-links a {
+  text-decoration: none;
+}
+footer .footer-content .quick-links a + a {
+  margin-top: 1em;
+}
+footer .footer-content .quick-links a i {
+  margin-right: 0.5em;
 }
 footer .legal {
   padding: 1rem 0;
