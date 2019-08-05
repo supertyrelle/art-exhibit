@@ -164,25 +164,28 @@ main {
             }
         }
     }
-    .about-cta {
-        margin-top:12em;
-        margin-bottom:10em;
-        h1 {
-            font-size:46pt;
-        }
-         button {
-            //  margin-top: 1em;
-            //  width: 100%;
-             background: rgba($primary, 65%);
-             color: $black;
-             font-weight: 100;
-             transition: background ease 230ms;
 
-             &:hover {
-                 background: rgba($primary, 85%);
-                 cursor: pointer;
-             }
-         }
+    .about-cta {
+        margin-top: 12em;
+        margin-bottom: 10em;
+
+        h1 {
+            font-size: 46pt;
+        }
+
+        button {
+             margin-top: 1em;
+            //  width: 100%;
+            background: rgba($primary, 65%);
+            color: $black;
+            font-weight: 100;
+            transition: background ease 230ms;
+
+            &:hover {
+                background: rgba($primary, 85%);
+                cursor: pointer;
+            }
+        }
     }
 }
 
@@ -191,6 +194,7 @@ footer {
     margin-top: 8em;
     width: 100%;
     background: rgba($black, 15%);
+    // padding: 1em 0;
 
     .logo {
         font-size: 25pt;
@@ -214,7 +218,7 @@ footer {
     }
 
     .footer-content {
-        padding: 1rem 0rem;
+        padding: 2rem 0rem;
 
         .quick-links {
             h5 {

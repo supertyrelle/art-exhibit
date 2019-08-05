@@ -247,6 +247,7 @@ main .about-cta h1 {
   font-size: 46pt;
 }
 main .about-cta button {
+  margin-top: 1em;
   background: rgba(250, 162, 114, 0.65);
   color: #171717;
   font-weight: 100;
@@ -280,7 +281,7 @@ footer .legal {
   padding: 0 2.5rem;
 }
 footer .footer-content {
-  padding: 1rem 0rem;
+  padding: 2rem 0rem;
 }
 footer .footer-content .quick-links h5 {
   text-transform: uppercase;
