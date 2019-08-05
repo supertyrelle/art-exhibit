@@ -101,7 +101,7 @@ main {
             top: 0px;
             left: 0px;
             display: inline-block;
-            height: 325vh;
+            height: 315vh;
 
             img {
                 position: sticky;
@@ -154,7 +154,7 @@ main {
                 }
 
                 &:nth-child(2) {
-                    padding-bottom: 35vh;
+                    padding-bottom: 25vh;
                 }
 
                 &:last-child {
@@ -163,6 +163,26 @@ main {
                 }
             }
         }
+    }
+    .about-cta {
+        margin-top:12em;
+        margin-bottom:10em;
+        h1 {
+            font-size:46pt;
+        }
+         button {
+            //  margin-top: 1em;
+            //  width: 100%;
+             background: rgba($primary, 65%);
+             color: $black;
+             font-weight: 100;
+             transition: background ease 230ms;
+
+             &:hover {
+                 background: rgba($primary, 85%);
+                 cursor: pointer;
+             }
+         }
     }
 }
 

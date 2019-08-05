@@ -187,7 +187,7 @@ main .ex-stats .ex-stats-art {
   top: 0px;
   left: 0px;
   display: inline-block;
-  height: 325vh;
+  height: 315vh;
 }
 main .ex-stats .ex-stats-art img {
   position: sticky;
@@ -234,10 +234,27 @@ main .ex-stats .ex-stats-content .fact li {
   display: block;
 }
 main .ex-stats .ex-stats-content .fact:nth-child(2) {
-  padding-bottom: 35vh;
+  padding-bottom: 25vh;
 }
 main .ex-stats .ex-stats-content .fact:last-child {
   padding-bottom: 25vh;
+}
+main .about-cta {
+  margin-top: 12em;
+  margin-bottom: 10em;
+}
+main .about-cta h1 {
+  font-size: 46pt;
+}
+main .about-cta button {
+  background: rgba(250, 162, 114, 0.65);
+  color: #171717;
+  font-weight: 100;
+  transition: background ease 230ms;
+}
+main .about-cta button:hover {
+  background: rgba(250, 162, 114, 0.85);
+  cursor: pointer;
 }
 
 footer {

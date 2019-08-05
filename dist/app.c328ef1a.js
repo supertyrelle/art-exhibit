@@ -129,8 +129,12 @@ module.exports = "/cta-ill-4.a73588d9.png";
 module.exports = "/cta-ill-5.b386d14f.png";
 },{}],"img/cta-ill/cta-ill-6.png":[function(require,module,exports) {
 module.exports = "/cta-ill-6.6d533065.png";
-},{}],"img/ex-stats/bulbs.png":[function(require,module,exports) {
-module.exports = "/bulbs.a1cbaca6.png";
+},{}],"img/ex-stats/bulbs.jpg":[function(require,module,exports) {
+module.exports = "/bulbs.b34992b7.jpg";
+},{}],"img/ex-stats/bulbs2.jpg":[function(require,module,exports) {
+module.exports = "/bulbs2.c307da26.jpg";
+},{}],"img/ex-stats/bulbs3.jpg":[function(require,module,exports) {
+module.exports = "/bulbs3.bfcee0a6.jpg";
 },{}],"../node_modules/aos/dist/aos.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -224,7 +228,11 @@ var _ctaIll5 = _interopRequireDefault(require("./img/cta-ill/cta-ill-5.png"));
 
 var _ctaIll6 = _interopRequireDefault(require("./img/cta-ill/cta-ill-6.png"));
 
-var _bulbs = _interopRequireDefault(require("./img/ex-stats/bulbs.png"));
+var _bulbs = _interopRequireDefault(require("./img/ex-stats/bulbs.jpg"));
+
+var _bulbs2 = _interopRequireDefault(require("./img/ex-stats/bulbs2.jpg"));
+
+var _bulbs3 = _interopRequireDefault(require("./img/ex-stats/bulbs3.jpg"));
 
 var _aos = _interopRequireDefault(require("aos"));
 
@@ -361,11 +369,35 @@ function home() {
       app.appendChild(exStatsSec); // create ex illustration section
 
       var exIllWrapper = document.createElement('div');
-      exIllWrapper.setAttribute("class", 'ex-stats-art');
-      exIllWrapper.setAttribute("data-aos", 'fade-up'); // import ex illustration
+      exIllWrapper.setAttribute("class", 'ex-stats-art'); // import ex illustration
 
       var exIll = document.createElement('img');
-      exIll.src = _bulbs.default; // create the exhibit stat content section
+      exIll.src = _bulbs.default;
+      exIll.setAttribute("class", 'exIll');
+      exIll.setAttribute("data-aos", 'fade-in');
+      exIll.setAttribute("data-aos-delay", '100');
+      var exIll2 = document.createElement('img');
+      exIll2.src = _bulbs2.default;
+      exIll2.setAttribute("class", 'exIll-2');
+      exIll2.setAttribute("data-aos", 'fade-in');
+      exIll2.setAttribute("data-aos-offset", '400');
+      exIll2.setAttribute("data-aos-delay", '800');
+      exIll2.setAttribute("data-aos-once", 'false');
+      exIll2.setAttribute("data-aos-disableMutationObserver", 'true');
+      exIll2.setAttribute("data-aos-duration", '230');
+      var exIll3 = document.createElement('img');
+      exIll3.src = _bulbs3.default;
+      exIll3.setAttribute("class", 'exIll-3');
+      exIll3.setAttribute("data-aos", 'fade-in');
+      exIll3.setAttribute("data-aos-offset", '900');
+      exIll3.setAttribute("data-aos-delay", '200');
+      exIll3.setAttribute("data-aos-once", 'false');
+      exIll3.setAttribute("data-aos-disableMutationObserver", 'true');
+      exIll3.setAttribute("data-aos-duration", '230'); // append the illustration to its parent
+
+      exIllWrapper.appendChild(exIll);
+      exIllWrapper.appendChild(exIll2);
+      exIllWrapper.appendChild(exIll3); // create the exhibit stat content section
 
       var exStatsContent = document.createElement('div');
       exStatsContent.setAttribute("class", 'ex-stats-content col-c'); // create the three main fact elements
@@ -381,7 +413,7 @@ function home() {
       var fact3 = document.createElement('div');
       fact3.setAttribute("class", 'fact');
       fact3.setAttribute("data-aos", 'fade-up');
-      fact3.setAttribute("data-aos-offset", '500'); // fact 1 content
+      fact3.setAttribute("data-aos-offset", '300'); // fact 1 content
 
       var fact1Header = document.createElement('h1');
       fact1Header.textContent = "8";
@@ -425,22 +457,41 @@ function home() {
       fact3.appendChild(fact3Header);
       fact3.appendChild(fact3Sub);
       exStatsContent.appendChild(fact3);
-      exIllWrapper.appendChild(exIll);
       exIllWrapper.appendChild(exStatsContent);
       exStatsSec.appendChild(exIllWrapper);
       exStatsSec.appendChild(exStatsContent);
     }
 
     ;
+
+    function about() {
+      // create content area element
+      var aboutCTA = document.createElement('section');
+      aboutCTA.setAttribute("class", 'about-cta col-c nw');
+      aboutCTA.setAttribute("data-aos", 'fade-up'); // append the call to action section
+
+      app.appendChild(aboutCTA); // create about cta title
+
+      var aboutCTATitle = document.createElement('h1');
+      aboutCTATitle.textContent = "Learn what we're about."; // call to action button
+
+      var aboutCTAButton = document.createElement('button');
+      aboutCTAButton.setAttribute("class", 'about-cta-button');
+      aboutCTAButton.textContent = 'About Us';
+      aboutCTA.appendChild(aboutCTATitle);
+      aboutCTA.appendChild(aboutCTAButton);
+    }
+
     callToAction();
     exStats();
+    about();
   }
 
   homeContent();
 }
 
 home();
-},{"./img/cta-ill/cta-ill-1.png":"img/cta-ill/cta-ill-1.png","./img/cta-ill/cta-ill-2.png":"img/cta-ill/cta-ill-2.png","./img/cta-ill/cta-ill-3.png":"img/cta-ill/cta-ill-3.png","./img/cta-ill/cta-ill-4.png":"img/cta-ill/cta-ill-4.png","./img/cta-ill/cta-ill-5.png":"img/cta-ill/cta-ill-5.png","./img/cta-ill/cta-ill-6.png":"img/cta-ill/cta-ill-6.png","./img/ex-stats/bulbs.png":"img/ex-stats/bulbs.png","aos":"../node_modules/aos/dist/aos.js","aos/dist/aos.css":"../node_modules/aos/dist/aos.css"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./img/cta-ill/cta-ill-1.png":"img/cta-ill/cta-ill-1.png","./img/cta-ill/cta-ill-2.png":"img/cta-ill/cta-ill-2.png","./img/cta-ill/cta-ill-3.png":"img/cta-ill/cta-ill-3.png","./img/cta-ill/cta-ill-4.png":"img/cta-ill/cta-ill-4.png","./img/cta-ill/cta-ill-5.png":"img/cta-ill/cta-ill-5.png","./img/cta-ill/cta-ill-6.png":"img/cta-ill/cta-ill-6.png","./img/ex-stats/bulbs.jpg":"img/ex-stats/bulbs.jpg","./img/ex-stats/bulbs2.jpg":"img/ex-stats/bulbs2.jpg","./img/ex-stats/bulbs3.jpg":"img/ex-stats/bulbs3.jpg","aos":"../node_modules/aos/dist/aos.js","aos/dist/aos.css":"../node_modules/aos/dist/aos.css"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

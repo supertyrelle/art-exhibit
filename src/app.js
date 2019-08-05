@@ -6,7 +6,9 @@ import illPt4p from './img/cta-ill/cta-ill-4.png';
 import illPt5p from './img/cta-ill/cta-ill-5.png';
 import illPt6p from './img/cta-ill/cta-ill-6.png';
 // import exhibit images
-import exStatsArt from './img/ex-stats/bulbs.png';
+import exStatsArt from './img/ex-stats/bulbs.jpg';
+import exStatsArt2 from './img/ex-stats/bulbs2.jpg';
+import exStatsArt3 from './img/ex-stats/bulbs3.jpg';
 
 // animate on scroll library
 import AOS from 'aos';
@@ -22,7 +24,6 @@ AOS.init({
     disableMutationObserver: false, // disables automatic mutations' detections (advanced)
     debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
     throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-
 
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 120, // offset (in px) from the original trigger point
@@ -135,13 +136,42 @@ function home() {
             // create ex illustration section
             const exIllWrapper = document.createElement('div');
             exIllWrapper.setAttribute(`class`, 'ex-stats-art');
-            exIllWrapper.setAttribute(`data-aos`, 'fade-up');
 
 
             // import ex illustration
             const exIll = document.createElement('img');
             exIll.src = exStatsArt;
+            exIll.setAttribute(`class`, 'exIll');
 
+            exIll.setAttribute(`data-aos`, 'fade-in');
+            exIll.setAttribute(`data-aos-delay`, '100');
+
+            const exIll2 = document.createElement('img');
+            exIll2.src = exStatsArt2;
+            exIll2.setAttribute(`class`, 'exIll-2');
+
+            exIll2.setAttribute(`data-aos`, 'fade-in');
+            exIll2.setAttribute(`data-aos-offset`, '400');
+            exIll2.setAttribute(`data-aos-delay`, '800');
+            exIll2.setAttribute(`data-aos-once`, 'false');
+            exIll2.setAttribute(`data-aos-disableMutationObserver`, 'true');
+            exIll2.setAttribute(`data-aos-duration`, '230');
+
+            const exIll3 = document.createElement('img');
+            exIll3.src = exStatsArt3;
+            exIll3.setAttribute(`class`, 'exIll-3');
+
+            exIll3.setAttribute(`data-aos`, 'fade-in');
+            exIll3.setAttribute(`data-aos-offset`, '900');
+            exIll3.setAttribute(`data-aos-delay`, '200');
+            exIll3.setAttribute(`data-aos-once`, 'false');
+            exIll3.setAttribute(`data-aos-disableMutationObserver`, 'true');
+            exIll3.setAttribute(`data-aos-duration`, '230');
+
+            // append the illustration to its parent
+            exIllWrapper.appendChild(exIll);
+            exIllWrapper.appendChild(exIll2);
+            exIllWrapper.appendChild(exIll3);
             // create the exhibit stat content section
             const exStatsContent = document.createElement('div');
             exStatsContent.setAttribute(`class`, 'ex-stats-content col-c');
@@ -158,7 +188,7 @@ function home() {
             const fact3 = document.createElement('div');
             fact3.setAttribute(`class`, 'fact');
             fact3.setAttribute(`data-aos`, 'fade-up');
-            fact3.setAttribute(`data-aos-offset`, '500');
+            fact3.setAttribute(`data-aos-offset`, '300');
 
             // fact 1 content
             const fact1Header = document.createElement('h1');
@@ -191,7 +221,7 @@ function home() {
                 const listItem = document.createElement('li');
 
                 listItem.setAttribute(`data-aos`, 'fade-right');
-                listItem.setAttribute(`data-aos-delay`, i*100);
+                listItem.setAttribute(`data-aos-delay`, i * 100);
                 listItem.innerHTML = listData[i];
                 listElement.appendChild(listItem);
             }
@@ -218,13 +248,37 @@ function home() {
             fact3.appendChild(fact3Sub);
             exStatsContent.appendChild(fact3);
 
-            exIllWrapper.appendChild(exIll);
+
             exIllWrapper.appendChild(exStatsContent);
             exStatsSec.appendChild(exIllWrapper);
             exStatsSec.appendChild(exStatsContent);
         };
+
+        function about() {
+            // create content area element
+            const aboutCTA = document.createElement('section');
+            aboutCTA.setAttribute(`class`, 'about-cta col-c nw');
+            aboutCTA.setAttribute(`data-aos`, 'fade-up');
+
+            // append the call to action section
+            app.appendChild(aboutCTA);
+
+            // create about cta title
+            const aboutCTATitle = document.createElement('h1');
+            aboutCTATitle.textContent = `Learn what we're about.`;
+
+            // call to action button
+            const aboutCTAButton = document.createElement('button')
+            aboutCTAButton.setAttribute(`class`, 'about-cta-button');
+            aboutCTAButton.textContent = 'About Us';
+
+            aboutCTA.appendChild(aboutCTATitle);
+            aboutCTA.appendChild(aboutCTAButton);
+
+        }
         callToAction();
         exStats();
+        about();
     }
     homeContent();
 }
